@@ -1,154 +1,198 @@
 # ⚡ IntelliGrid Pro – AI Energy Forecasting & Anomaly Detection
 
-> **Predict. Detect. Optimize.**
-> An intelligent energy analytics platform built to reduce energy waste and optimize building performance using AI.
+> Predict. Detect. Optimize.  
+> An AI-powered energy analytics platform for forecasting consumption, detecting anomalies, and optimizing building performance.
 
 ---
 
-## 🚀 What is IntelliGrid Pro?
+## 🚀 Project Overview
 
-**IntelliGrid Pro** is a full-stack AI-powered energy monitoring and optimization system that analyzes building energy usage, predicts future consumption, detects anomalies in real-time, and provides actionable cost-saving recommendations.
+**IntelliGrid Pro** is a full-stack machine learning based energy monitoring system designed to analyze building energy usage, predict future consumption, detect abnormal patterns, and generate intelligent recommendations to reduce energy waste.
 
-It transforms raw energy data into **clear decisions, alerts, and insights**.
-
----
-
-## 🎯 Why this project matters
-
-Energy inefficiency is a massive hidden problem.
-
-- ❌ Buildings waste energy without detection  
-- ❌ No real-time anomaly identification  
-- ❌ High operational costs  
-- ❌ No actionable insights  
-
-👉 IntelliGrid Pro solves this by bringing **AI-driven intelligence into energy monitoring**.
+The platform converts raw energy data into **actionable insights, alerts, and cost-saving decisions** using advanced ML models and interactive dashboards.
 
 ---
 
-## 🧠 Core Capabilities
+## 🎯 Problem Statement
+
+Energy inefficiency in buildings leads to high operational cost and hidden waste.
+
+Common issues:
+- No real-time anomaly detection
+- No forecasting of energy usage
+- Lack of intelligent recommendations
+- Difficult to analyze large energy datasets
+- No simulation before applying changes
+
+**IntelliGrid Pro solves this using AI-driven analytics.**
+
+---
+
+## 🧠 Key Features
 
 ### 🔮 Energy Forecasting
-- Predicts expected energy usage using **XGBoost**
-- Learns patterns from time, weather, and building data
+- Predicts future energy consumption using **XGBoost**
+- Learns patterns from time, weather, and building metadata
+- Helps plan energy usage efficiently
 
 ### 🔥 Anomaly Detection
-- Detects abnormal energy spikes using **Isolation Forest**
-- Identifies inefficiencies in real-time
+- Uses **Isolation Forest**
+- Detects abnormal spikes in energy usage
+- Helps identify faults, leaks, or inefficiencies
 
 ### 🚨 Smart Alert System
-- Flags critical and warning-level anomalies
-- Helps prioritize energy issues instantly
+- Classifies anomalies as warning / critical
+- Real-time alert indicators
+- Helps prioritize issues
 
 ### 💡 AI Recommendation Engine
-- Suggests actions like load shifting, HVAC optimization
-- Estimates **potential cost savings**
+- Suggests actions to reduce energy waste
+- Example:
+  - HVAC optimization
+  - Load shifting
+  - Temperature adjustment
+- Shows estimated cost savings
 
 ### 🔬 Simulation Engine
-- Simulates energy behavior under:
-  - Temperature changes
-  - Demand changes
-- Shows impact before real-world implementation
+- Simulates energy usage under different conditions
+- Temperature change
+- Demand change
+- Usage variation
+
+Helps test before real-world implementation.
 
 ### 📊 Interactive Dashboard
-- Built with **Streamlit + Plotly**
-- Clean, intuitive, and industry-style UI
+Built with:
+- Streamlit
+- Plotly
+
+Includes:
+- KPIs
+- Charts
+- Heatmaps
+- Alerts
+- Reports
 
 ---
 
-## 🖥️ Dashboard Overview
+## 🖥️ Dashboard Pages
 
 | Page | Description |
 |------|------------|
-| 📊 Overview | System KPIs, alerts, energy trends |
-| 🏢 Building Analysis | Deep dive into individual building performance |
-| 🧠 AI Insights | Patterns, heatmaps, anomaly analysis |
-| 💡 Recommendations | AI-generated cost-saving actions |
-| 🎯 Model Performance | ML evaluation metrics |
-| 🔬 Simulation | Scenario-based energy prediction |
-| 📄 Reports | Exportable data & summaries |
+| Overview | KPIs, total energy, alerts, trends |
+| Building Analysis | Individual building performance |
+| AI Insights | Heatmaps, anomaly patterns |
+| Recommendations | AI cost saving suggestions |
+| Model Performance | ML metrics |
+| Simulation | Scenario testing |
+| Reports | Exportable summaries |
+| About | Project details |
 
 ---
 
 ## ⚙️ Tech Stack
 
-| Layer | Technology |
-|------|-----------|
+| Category | Technology |
+|----------|-----------|
+| Language | Python |
 | Data Processing | Pandas, NumPy |
 | Machine Learning | XGBoost |
 | Anomaly Detection | Isolation Forest |
 | Visualization | Plotly |
-| Frontend | Streamlit |
+| Dashboard | Streamlit |
+| Dataset | ASHRAE Energy Prediction |
 
 ---
 
-## 🧪 How it Works
+## 🧪 Workflow
 
-1. 📥 Load building + weather data  
-2. 🧠 Feature engineering (time, temp, usage patterns)  
-3. 🔮 Predict energy usage using ML model  
-4. 🔥 Detect anomalies (deviation from prediction)  
-5. 💡 Generate insights & recommendations  
-6. 📊 Visualize everything in dashboard  
+1. Load building, weather, and energy data  
+2. Perform feature engineering  
+3. Train forecasting model (XGBoost)  
+4. Predict expected energy usage  
+5. Detect anomalies using Isolation Forest  
+6. Generate insights & recommendations  
+7. Visualize results in dashboard  
 
 ---
 
 ## 📈 Business Impact
 
-- 💰 Reduce energy costs by up to **30%**
-- 🔍 Detect hidden inefficiencies
-- ⚡ Improve operational efficiency
-- 🧠 Enable data-driven decision making
+- Reduce energy cost up to 30%
+- Detect hidden inefficiencies
+- Improve building performance
+- Enable data-driven decisions
+- Useful for smart cities & IoT systems
+
+---
+
+## 📁 Dataset
+
+Dataset not included due to size.
+
+Download from Kaggle:
+
+https://www.kaggle.com/competitions/ashrae-energy-prediction
+
+Place files inside:
+
+```
+data/
+```
+
+Required files:
+
+```
+train.csv
+weather_train.csv
+building_metadata.csv
+```
 
 ---
 
 ## ▶️ How to Run
 
+Install dependencies
+
 ```bash
 pip install -r requirements.txt
+```
+
+Run project
+
+```bash
 streamlit run app.py
+```
 
-
-## 📷 Demo & Screenshots
-
-## 📷 Demo & Screenshots
-
-### 📊 Overview Dashboard
-![Overview](screenshots/overview.png)
-
-### 🧠 AI Insights
-![AI Insights](screenshots/ai_insights.png)
-
-### 🏢 Building Analysis
-![Building Analysis](screenshots/building_analysis.png)
-
-### 💡 AI Recommendations
-![Recommendations](screenshots/ai_recommendations.png)
-
-### 🔬 Energy Simulation
-![Simulation](screenshots/energy_simulation.png)
-
-### 🎯 Model Performance
-![Model](screenshots/model_performance.png)
-
-### 📄 Reports
-![Reports](screenshots/reports.png)
-
-### 📘 About Project
-![About](screenshots/about.png)
 ---
 
-## 🚀 Future Enhancements
+## 📷 Screenshots
 
-- 📡 Real-time IoT integration  
-- ☁️ Cloud deployment (AWS/GCP)  
-- 🤖 Automated energy control  
-- 📊 Advanced deep learning models  
+```
+screenshots/overview.png
+screenshots/ai_insights.png
+screenshots/building_analysis.png
+screenshots/ai_recommendations.png
+screenshots/energy_simulation.png
+screenshots/model_performance.png
+screenshots/reports.png
+screenshots/about.png
+```
 
+---
+
+## 🚀 Future Improvements
+
+- Real-time IoT data integration
+- Cloud deployment (AWS / GCP)
+- Deep learning forecasting
+- Auto energy control system
+- Multi-building monitoring
 
 ---
 
 ## 👨‍💻 Author
 
-**Sathvik**  
-B.Tech Data Science
+Sathvik  
+
+---
