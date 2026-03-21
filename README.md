@@ -168,15 +168,29 @@ streamlit run app.py
 
 ## 📷 Screenshots
 
-```
-screenshots/overview.png
-screenshots/ai_insights.png
-screenshots/building_analysis.png
-screenshots/ai_recommendations.png
-screenshots/energy_simulation.png
-screenshots/model_performance.png
-screenshots/reports.png
-screenshots/about.png
+### 📊 Overview Dashboard
+![Overview](screenshots/overview.png)
+
+### 🧠 AI Insights
+![AI Insights](screenshots/ai_insights.png)
+
+### 🏢 Building Analysis
+![Building Analysis](screenshots/building_analysis.png)
+
+### 💡 AI Recommendations
+![Recommendations](screenshots/ai_recommendations.png)
+
+### 🔬 Energy Simulation
+![Simulation](screenshots/energy_simulation.png)
+
+### 🎯 Model Performance
+![Model](screenshots/model_performance.png)
+
+### 📄 Reports
+![Reports](screenshots/reports.png)
+
+### 📘 About Project
+![About](screenshots/about.png)
 ```
 
 ---
