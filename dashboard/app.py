@@ -10,6 +10,11 @@ import plotly.graph_objects as go
 import joblib
 from sklearn.metrics import r2_score, mean_absolute_error
 
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
+
 from src.anomaly_detection import detect_anomalies
 
 st.set_page_config(layout="wide", page_title="⚡ IntelliGrid Pro")
@@ -17,11 +22,13 @@ st.set_page_config(layout="wide", page_title="⚡ IntelliGrid Pro")
 # ======================
 # LOAD DATA
 # ======================
+import os
+BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 @st.cache_data
 def load_data():
-    df = pd.read_csv("data/train.csv", nrows=100000)
-    weather = pd.read_csv("data/weather_train.csv")
-    building = pd.read_csv("data/building_metadata.csv")
+    df = pd.read_csv(os.path.join(BASE_DIR, "data/train.csv"), nrows=100000)
+    weather = pd.read_csv(os.path.join(BASE_DIR, "data/weather_train.csv"))
+    building = pd.read_csv(os.path.join(BASE_DIR, "data/building_metadata.csv"))
 
     df = df.merge(building, on="building_id", how="left")
     df = df.merge(weather, on=["site_id","timestamp"], how="left")
@@ -43,7 +50,7 @@ df_original = load_data()
 # ======================
 # MODEL
 # ======================
-model = joblib.load("models/xgb_model.pkl")
+model = joblib.load(os.path.join(BASE_DIR, "models/xgb_model.pkl"))
 
 features = [
     "square_feet","air_temperature","cloud_coverage",
@@ -54,7 +61,7 @@ features = [f for f in features if f in df_original.columns]
 
 df_original[features] = df_original[features].fillna(df_original[features].median())
 df_original["prediction"] = model.predict(df_original[features])
-
+st.sidebar.success("✅ Model Loaded")
 # ======================
 # SIDEBAR
 # ======================
